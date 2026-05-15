@@ -10,18 +10,18 @@ import productRoutes from "./routes/productRoute.js";
 import cartRoutes from "./routes/cart.js";
 import addressRoutes from "./routes/addressRoute.js";
 import orderRoutes from "./routes/orderRoute.js";
-
 dotenv.config();
 
 const app = express();
+
 app.use(express.json());
+
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-  }),
+   
+  })
 );
 
 console.log('test env',process.env.FRONTEND_URL);
