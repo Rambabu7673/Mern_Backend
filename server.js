@@ -22,6 +22,8 @@ app.use(
   }),
 );
 
+console.log('test env',process.env.FRONTEND_URL);
+
 app.use('/user/auth', userRoutes);
 app.use('/user/products', productRoutes);
 app.use('/user/cart', cartRoutes);
